@@ -1,0 +1,38 @@
+[
+  {
+    "id": "INV-0001",
+    "date": "2026-02-14",
+    "title": "First Date",
+    "category": "trial",
+    "description": "Paid in full, no refunds requested.",
+    "amountLabel": "One nervous smile",
+    "photoKeys": []
+  },
+  {
+    "id": "INV-0002",
+    "date": "2026-02-14",
+    "title": "First \"I love you\"",
+    "category": "trial",
+    "description": "Priceless (system error: amount cannot be $0).",
+    "amountLabel": "Priceless",
+    "photoKeys": []
+  },
+  {
+    "id": "INV-0003",
+    "date": "2026-06-11",
+    "title": "The Proposal",
+    "category": "pre-wedding",
+    "description": "Lifetime plan activated. Trial extended through wedding day.",
+    "amountLabel": "One yes",
+    "photoKeys": []
+  },
+  {
+    "id": "INV-0004",
+    "date": "2026-12-13",
+    "title": "Wedding Day",
+    "category": "wedding",
+    "description": "Plan upgraded to Married. Auto-renew: ON.",
+    "amountLabel": "Forever",
+    "photoKeys": []
+  }
+]

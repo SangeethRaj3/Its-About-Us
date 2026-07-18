@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf9f6;
+  --foreground: #1f1b16;
+  --surface: #f2efe9;
+  --border: #e5e0d8;
+  --accent: #b3435c;
+  --accent-soft: #f3e4e8;
+  --sage: #5c7a5c;
+  --sage-soft: #e8efe8;
+  --muted: #6b6560;
+  --card-shadow: 0 1px 2px rgba(31, 27, 22, 0.04),
+    0 4px 16px rgba(31, 27, 22, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Flip clock digit */
+.flip-card {
+  perspective: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-half {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-half.top {
+  top: 0;
+  border-radius: 6px 6px 0 0;
+  line-height: 1.85em;
+}
+
+.flip-half.bottom {
+  bottom: 0;
+  border-radius: 0 0 6px 6px;
+  line-height: 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.flip-half.bottom .digit-face {
+  margin-top: -0.925em;
+}
+
+.flip-anim-top {
+  animation: flipTop 0.35s ease-in forwards;
+  transform-origin: bottom center;
+}
+
+.flip-anim-bottom {
+  animation: flipBottom 0.35s ease-out 0.35s both;
+  transform-origin: top center;
+}
+
+@keyframes flipTop {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flipBottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* Receipt paper texture feel */
+.receipt-paper {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 8%
+    ),
+    var(--surface);
+  border: 1px dashed var(--border);
+}
+
+.receipt-paper::before {
+  content: "";
+  display: block;
+  height: 8px;
+  margin: -1px -1px 12px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--surface) 0 8px,
+    transparent 8px 12px
+  );
+  clip-path: polygon(
+    0 0,
+    4% 100%,
+    8% 0,
+    12% 100%,
+    16% 0,
+    20% 100%,
+    24% 0,
+    28% 100%,
+    32% 0,
+    36% 100%,
+    40% 0,
+    44% 100%,
+    48% 0,
+    52% 100%,
+    56% 0,
+    60% 100%,
+    64% 0,
+    68% 100%,
+    72% 0,
+    76% 100%,
+    80% 0,
+    84% 100%,
+    88% 0,
+    92% 100%,
+    96% 0,
+    100% 100%,
+    100% 0
+  );
+}

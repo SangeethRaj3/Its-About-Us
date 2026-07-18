@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fs-001",
+    "personName": "Mom (S side)",
+    "relation": "Mother",
+    "storyText": "Placeholder story — collect a short memory from parents before the wedding rush. What they noticed the first time they met the other half of US, Inc.",
+    "audioKey": null,
+    "year": null
+  },
+  {
+    "id": "fs-002",
+    "personName": "Dad (H side)",
+    "relation": "Father",
+    "storyText": "Placeholder story — ask about marriage advice that actually held up, or a ridiculous early-dating anecdote.",
+    "audioKey": null,
+    "year": null
+  },
+  {
+    "id": "fs-003",
+    "personName": "Grandparent",
+    "relation": "Grandparent",
+    "storyText": "Placeholder for an oral-history clip. Record a voice note, upload the audio key under family/, and swap this text for a real transcript.",
+    "audioKey": null,
+    "year": null
+  }
+]
